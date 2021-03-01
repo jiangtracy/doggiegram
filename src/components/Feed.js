@@ -5,6 +5,7 @@ import { FlatList } from 'react-native';
 
 const data = [
   {
+    id: '1',
     user : {
       imageUri: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80',
       name: "Dumpling"
@@ -15,6 +16,7 @@ const data = [
     postedAt: '6 minutes ago'
   },
   {
+  id: '2',
   user : {
     imageUri:'https://images.unsplash.com/photo-1548658166-136d9f6a7e76?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1000&q=80',
     name: "Buddy"
@@ -30,7 +32,8 @@ const Feed = () => (
   <FlatList 
     ListHeaderComponent={Stories}
     data={data}
-    renderItem={({item}) => <Post post={item} key={item.user.imageUri} />}
+    renderItem={({item}) => <Post post={item} />}
+    keyExtractor={({id}) => id}
   />
 )
 
