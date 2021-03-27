@@ -5,10 +5,12 @@ import HomeScreen from '../screens/HomeScreen/';
 import { Feather } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import logo from '../assets/images/logo.png';
+import StoryScreen from '../screens/StoryScreen/'
 
 const HomeStack = createStackNavigator();
 
 const HomeRoutes = () => (
+
 	<HomeStack.Navigator>
 		<HomeStack.Screen
 			name="Home"
@@ -25,9 +27,10 @@ const HomeRoutes = () => (
 						<Ionicons name="paper-plane-outline" size={25} />
 					</View>
 				),
-				headerTitle: () => <Image source={logo} resizeMode="contain" style={{ width: 100 }} />
+				headerTitle: () => <Image source={logo} resizeMode="contain" style={{ width: 135, height: 50 }} />
 			}}
 		/>
+		
 	</HomeStack.Navigator>
 );
 
