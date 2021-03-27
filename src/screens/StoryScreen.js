@@ -16,8 +16,6 @@ import ProfilePicture from '../components/ProfilePicture';
 import { Feather } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
-
-
 const StoryScreen = () => {
 
   const [userStories, setUserStories] = useState(null);
@@ -111,12 +109,6 @@ const StoryScreen = () => {
                 <Text style={styles.userName}>{userStories.user.name}</Text>
               </View>
               <View style={styles.bottomContainer}>
-                {/* <View style={styles.cameraButton}>
-                  <Feather 
-                    name="camera" 
-                    size={28} 
-                    color="#ffffff" />
-                </View> */}
 						    
                 <View style={styles.textInputContainer}>
                 <Feather 
